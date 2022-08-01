@@ -6,19 +6,11 @@ import React, { Component } from 'react'
 import News from './components/News';
 
 export default class App extends Component {
-  c = 'hormunium'
   render() {
     return (
       <div>
-
-     <NavBar/>
-
-     <News/>
-
-
-        HELOO FUNCTION BASED COMPONENTS
-        jhon play {this.c}
-
+        <NavBar/>
+        <News pageSize={12} country="in" category="sports"/>
       </div>
     )
   }

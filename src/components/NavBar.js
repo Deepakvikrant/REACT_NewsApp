@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+
 import React, { Component } from "react";
 
 export default class navbar extends Component {
@@ -7,10 +7,10 @@ export default class navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
-              Navbar
+              Todays! Update
             </a>
             <button
               className="navbar-toggler"
@@ -30,16 +30,25 @@ export default class navbar extends Component {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">
-                    About
+                  <a className="nav-link " aria-current="page" href="/">
+                  Home
                   </a>
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">
-                    Home
+                  <a className="nav-link" aria-current="page" href="/">
+                    About
                   </a>
+
                 </li>
+                
+                <li className="nav-item "><a href="" className="nav-link">business</a></li>
+                <li className="nav-item "><a href="" className="nav-link">entertainment</a></li>
+                <li className="nav-item "><a href="" className="nav-link">genral</a></li>
+                <li className="nav-item "><a href="" className="nav-link">health</a></li>
+                <li className="nav-item "><a href="" className="nav-link">science</a></li>
+                <li className="nav-item "><a href="" className="nav-link">sports</a></li>
+                <li className="nav-item "><a href="" className="nav-link">technology</a></li>
               </ul>
             </div>
           </div>
