@@ -45,7 +45,7 @@ export default class News extends Component {
       this.props.country
     }&category=${
       this.props.category
-    }&category=${this.props.category}&apiKey=3e271ebb3e824002b7196a000a5702d3&page=${
+    }&apiKey=3e271ebb3e824002b7196a000a5702d3&page=${
       this.state.page - 1
     }&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
@@ -71,7 +71,7 @@ export default class News extends Component {
         this.props.country
       }&category=${
         this.props.category
-      }&category=${this.props.category}&apiKey=3e271ebb3e824002b7196a000a5702d3&page=${
+      }&apiKey=3e271ebb3e824002b7196a000a5702d3&page=${
         this.state.page + 1
       }&pageSize=${this.props.pageSize}`;
       this.setState({ loading: true });
