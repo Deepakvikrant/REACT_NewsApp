@@ -1,22 +1,20 @@
 import React, { Component } from "react";
 import NewsItems from "./NewsItems";
 import Spinner from "./Spinner";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 export default class News extends Component {
+  static defaultProps = {
+    country: "all",
+    pageSize: 5,
+    category: "genral",
+  };
 
-  static defaultProps ={
-      country : 'all',
-      pageSize : 5,
-      category : 'genral'
-    }
+  static propTypes = {
+    country: PropTypes.string,
+    pageSize: PropTypes.number,
+    category: PropTypes.string,
+  };
 
-    static propTypes = {
-      country : PropTypes.string,
-      pageSize : PropTypes.number,
-      category : PropTypes.string,
-    }
-    
-  
   constructor() {
     super();
     this.state = {
@@ -88,7 +86,9 @@ export default class News extends Component {
   render() {
     return (
       <div className="container my-3">
-        <h1 className="text-center" style={{margin:'35px'}}>Todys!Updates :- Headlines of the day! </h1>
+        <h1 className="text-center" style={{ margin: "35px" }}>
+          Todys!Updates :- Headlines of the day!{" "}
+        </h1>
         {this.state.loading && <Spinner />}
         {/* {this.state.articles.map((element)=>{console.log(element);})} */}
         <div className="row">
@@ -96,7 +96,7 @@ export default class News extends Component {
             return (
               <div className="col-md-4" key={element.urlToImage}>
                 <NewsItems
-                  title={element.title ? element.title.slice(0, 45) : ""}
+                  title={element.title ? element.title : "Title not Avilable"}
                   discription={
                     element.description ? element.description.slice(0, 80) : ""
                   }
@@ -106,6 +106,9 @@ export default class News extends Component {
                       : "https://images.hindustantimes.com/tech/img/2022/07/28/1600x900/jpegPIA25017_(1)_1658994714280_1659008302741_1659008302741.jpg"
                   }
                   newsUrl={element.url}
+                  author={element.author}
+                  date={element.publishedAt}
+                  chenal={element.source.name}
                 />
               </div>
             );
