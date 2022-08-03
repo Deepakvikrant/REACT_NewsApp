@@ -32,7 +32,7 @@ export default class navbar extends Component {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <a className="nav-link " aria-current="page" href="/">
-                  Home
+                    Home
                   </a>
                 </li>
 
@@ -42,9 +42,9 @@ export default class navbar extends Component {
                 <li className="nav-item "><Link to="/science" className="nav-link">Science</Link></li>
                 <li className="nav-item "><Link to="/sports" className="nav-link">Sports</Link></li>
                 <li className="nav-item "><Link to="/technology" className="nav-link">Technology</Link></li>
-            
 
-              <li className="nav-item">
+
+                <li className="nav-item">
                   <a className="nav-link" aria-current="page" href="/">
                     About
                   </a>
