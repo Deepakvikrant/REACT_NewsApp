@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import NewsItems from "./NewsItems";
 import Spinner from "./Spinner";
 import PropTypes from "prop-types";
+import './news.css'
+
 export default class News extends Component {
   static defaultProps = {
     country: "all",
     pageSize: 5,
-    category: "genral",
+    category: "general",
   };
 
   static propTypes = {
@@ -15,13 +17,19 @@ export default class News extends Component {
     category: PropTypes.string,
   };
 
-  constructor() {
-    super();
+  capitalizeFirstLetter = (string)=>{
+    return string.charAt(0).toUpperCase() + string.slice(1);
+
+  }
+
+  constructor(props) {
+    super(props);
     this.state = {
       articles: [],
       loading: false,
       page: 1,
     };
+  document.title = `${this.capitalizeFirstLetter(this.props.category)} - Today's ! UpDate`;
   }
 
   async updateNow() {
@@ -55,11 +63,12 @@ export default class News extends Component {
     this.updateNow()
   };
 
+
   render() {
     return (
       <div className="container my-3">
         <h1 className="text-center" style={{ margin: "35px" }}>
-          Todys!Updates :- Headlines of the day!{" "}
+          Today's ! UpDate :- <small>Top {this.capitalizeFirstLetter(this.props.category)} headlines</small>{" "}
         </h1>
         {this.state.loading && <Spinner />}
         {/* {this.state.articles.map((element)=>{console.log(element);})} */}

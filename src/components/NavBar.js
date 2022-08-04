@@ -11,7 +11,7 @@ export default class navbar extends Component {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">
-              Todays! Update
+              <img src={process.env.PUBLIC_URL + "todays.png"} alt='todays.png' width={182} height={50} />
             </Link>
             <button
               className="navbar-toggler"
@@ -43,15 +43,11 @@ export default class navbar extends Component {
                 <li className="nav-item "><Link to="/sports" className="nav-link">Sports</Link></li>
                 <li className="nav-item "><Link to="/technology" className="nav-link">Technology</Link></li>
 
-
-                <li className="nav-item">
-                  <a className="nav-link" aria-current="page" href="/">
-                    About
-                  </a>
-
-                </li>
-
               </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
             </div>
           </div>
         </nav>

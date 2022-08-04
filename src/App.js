@@ -7,7 +7,7 @@ import React, { Component } from 'react'
 import News from './components/News';
 
 export default class App extends Component {
-  pageSize = 15
+  pageSize = 12
   render() {
     return (
       <Router>
