@@ -44,9 +44,9 @@ export default class navbar extends Component {
                 <li className="nav-item "><Link to="/technology" className="nav-link">Technology</Link></li>
 
               </ul>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-success" type="submit">Search</button>
+              <form className="d-flex" role="search">
+                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button className="btn btn-outline-success" type="submit">Search</button>
               </form>
             </div>
           </div>
